@@ -1,0 +1,30 @@
+char 1 byte
+int 2 bytes
+float 4 bytes
+double 8 bytes
+
+x[4], x[0] = 4092
+
+-> Se x declarado char
+x+0= 4092
+x+1= 4093
+x+2= 4094
+x+3= 4095
+
+-> Se x declarado int
+x+0= 4092
+x+1= 4094
+x+2= 4096
+x+3= 4098
+
+-> Se x declarado float
+x+0= 4092
+x+1= 4096
+x+2= 4100
+x+3= 4104
+
+-> Se x declarado double
+x+0= 4092
+x+1= 4100
+x+2= 4108
+x+3= 4116

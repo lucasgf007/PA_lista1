@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main()
+{
+    // Considerando a declaração int mat[4], *p, x;, quais das seguintes expressões são válidas? Justifique
+    
+    p = mat + 1; // valido, pois está atribuindo a "p" ao 2º item do array
+    p = mat++; // invalida
+    p = ++mat; // invalida 
+    x = (*mat)++; // valida, pois ela primeiro incrementa +1 no valor do 1° item do array
+
+}

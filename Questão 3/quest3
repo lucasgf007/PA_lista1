@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    // Se i e j são variáveis inteiras e p e q ponteiros para int, quais das seguintes expressões de
+    // atribuição são ilegais?
+    
+    int i, j, *p, *q;
+
+    p = i;  // ilegais
+    q = &j;
+    p = &*&i;
+    i = (*&)j;  // ilegais
+    i = *&j; 
+    i = *&*&j;
+    q = *p;   // ilegais
+    i = (*p)++ + *q;
+
+    
+    return 0;
+}

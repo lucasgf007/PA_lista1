@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main()
+{
+    char x[4]; // Aumenta de 1 em 1
+    printf("x = %d \n", x+0); // RESP 4092
+    printf("x = %d \n", x+1); // RESP 4093
+    printf("x = %d \n", x+2); // RESP de 4094
+    printf("x = %d \n", x+3); // RESP de 4095
+
+    int x2[4]; // Aumenta de 2 em 2
+    printf("x2 = %d \n", x2+0); // RESP 4092
+    printf("x2 = %d \n", x2+1); // RESP de 4094
+    printf("x2 = %d \n", x2+2); // RESP de 4096
+    printf("x2 = %d \n", x2+3); // RESP de 4098
+
+    float x3[4]; // Aumenta de 4 em 4
+    printf("x3 = %d \n", x3+0); // RESP 4092
+    printf("x3 = %d \n", x3+1); // RESP de 4096
+    printf("x3 = %d \n", x3+2); // RESP de 4100
+    printf("x3 = %d \n", x3+3); // RESP de 4104
+
+    double x4[4]; // Aumenta de 8 em 8
+    printf("x4 = %d \n", x4+0); // RESP 4092
+    printf("x4 = %d \n", x4+1); // RESP de 4100
+    printf("x4 = %d \n", x4+2); // RESP de 4108
+    printf("x4 = %d \n", x4+3); // RESP de 4116
+
+    return 0;
+}
+
+
