@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void ImprimeMatriz(int **matriz, int nl, int nc){
+  int i,j;
+  for(i = 0; i < nl; i++){
+    for(j = 0; j < nc; j++){
+        printf(" %d ",matriz[i][j]);
+    }
+    printf("\n");
+  }
+}
+void calculo(int **matrizA, **matrizB, **matrizC, int nl, int nc,){
+    int i, j; 
+
+    for(i=0;i<nl;i++){
+        for(j=0;j<nc;j++){
+            matrizC[i][j] = matrizA[i][j] * matrizB[i][j];   
+        }
+    }
+    
+}
+
+int main()
+{
+    int nl, nc, np, i, r, j, k;
+    int **matrizA, **matrizB, **matrizC;
+    
+    printf("digite o valor de nl: \n");
+    scanf("%d", &nl);
+    
+    printf("digite o valor de nc: \n");
+    scanf("%d", &nc);
+    
+    
+    printf("rvalores da matriz A: \n");
+    
+    for(i=0; i < nl; i++){
+        for(j=0; j < nc; j++){
+            printf ("\nElemento[%d][%d] = ", i, j);
+            scanf(" %d ", &matrizA[i][j]);
+        }
+    }
+    
+    printf("rvalores da matriz B: \n");
+    
+    for(i=0; i < nl; i++){
+        for(j=0; j < nc; j++){
+            printf ("\nElemento[%d][%d] = ", i, j);
+            scanf(" %d ", &matrizB[i][j]);
+        }
+    }
+    
+    for(i=0; i < 3; i++){
+        for(j=0; j < 3; j++){
+            matrizC[i][j] = 0;
+        }
+    }
+    
+    
+    calculo(matrizA, matrizB, matrizC, nl, nc, r);
+    
+    ImprimeMatriz(matrizC, nl, nc);
+    
+
+    return 0;
+}
